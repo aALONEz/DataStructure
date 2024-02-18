@@ -1,11 +1,17 @@
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS 1
 #include <stdlib.h>
-#include "AddressBook.h"//包含通讯录头文件
+#include <stdio.h>
+#include <assert.h>
+#include <string.h>
+#include "AddressBook.h"			//包含通讯录头文件
 
-#define LIST_MAX_SIZE 100	//静态顺序表的最大可以有多少个元素
+#define LIST_MAX_SIZE 100			//静态顺序表的最大可以有多少个元素
 
-//typedef int SL_Data_Type;	//重定义int类型名
-typedef Contacts SL_Data_Type;
+//typedef int SL_Data_Type;			//重定义int类型名
+typedef Contacts SL_Data_Type;		//将联系人结构体类型定义为SL_Data_Type，此时顺序表里面的每个元素都是联系人结构体
+
+
 
 //静态顺序表
 typedef struct
@@ -15,11 +21,11 @@ typedef struct
 }StaticSeqList;
 
 //动态顺序表
-typedef struct
+typedef struct SeqList
 {
-	SL_Data_Type* a;	//动态申请的内存指针
-	int length;			//动态顺序表有效数据个数
-	int capacity;		//动态顺序表最大容量
+	SL_Data_Type* a;				//动态申请的内存指针
+	int length;						//动态顺序表有效数据个数
+	int capacity;					//动态顺序表最大容量
 }DynamicSeqList;
 
 

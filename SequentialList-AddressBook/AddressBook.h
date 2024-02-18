@@ -1,13 +1,9 @@
 #pragma once
-#include <stdlib.h>
-#include <stdio.h>
-struct DynamicSeqList;//前置声明
 
 #define NAME_MAX 20
 #define TEL_MAX 12
 #define ADDR_MAX 100
 
-typedef struct DynamicSeqList AddressBook_SL;
 
 
 typedef enum
@@ -26,6 +22,9 @@ typedef struct
 	char addr[ADDR_MAX];	//联系人地址
 }Contacts;
 
+struct SeqList;//前置声明
+typedef struct SeqList AddressBook_SL;
+
 void AddressBook_Menu(void);
 void AddressBook_Init(AddressBook_SL *pAddressBook);
 void AddressBook_DesTroy(AddressBook_SL *pAddressBook);
@@ -33,3 +32,4 @@ void AddressBook_AddContacts(AddressBook_SL *pAddressBook);
 void AddressBook_ModifyContacts(AddressBook_SL *pAddressBook);
 void AddressBook_FindContacts(AddressBook_SL *pAddressBook);
 void AddressBook_ShowContacts(AddressBook_SL *pAddressBook);
+void AddressBook_DelContacts(AddressBook_SL *pAddressBook);

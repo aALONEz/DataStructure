@@ -3,22 +3,6 @@
   "WorkspaceRootPath": "Z:\\DataStructure\\SequentialList-AddressBook\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{459F9554-5921-4C3D-9BC3-8A5BDFB5D9EB}|SequentialList-AddressBook.vcxproj|Z:\\DataStructure\\SequentialList-AddressBook\\AddressBook.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{459F9554-5921-4C3D-9BC3-8A5BDFB5D9EB}|SequentialList-AddressBook.vcxproj|solutionrelative:AddressBook.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{459F9554-5921-4C3D-9BC3-8A5BDFB5D9EB}|SequentialList-AddressBook.vcxproj|Z:\\DataStructure\\SequentialList-AddressBook\\AddressBook.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{459F9554-5921-4C3D-9BC3-8A5BDFB5D9EB}|SequentialList-AddressBook.vcxproj|solutionrelative:AddressBook.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{459F9554-5921-4C3D-9BC3-8A5BDFB5D9EB}|SequentialList-AddressBook.vcxproj|Z:\\DataStructure\\SequentialList-AddressBook\\SeqList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{459F9554-5921-4C3D-9BC3-8A5BDFB5D9EB}|SequentialList-AddressBook.vcxproj|solutionrelative:SeqList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{459F9554-5921-4C3D-9BC3-8A5BDFB5D9EB}|SequentialList-AddressBook.vcxproj|Z:\\DataStructure\\SequentialList-AddressBook\\SeqList.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{459F9554-5921-4C3D-9BC3-8A5BDFB5D9EB}|SequentialList-AddressBook.vcxproj|solutionrelative:SeqList.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{459F9554-5921-4C3D-9BC3-8A5BDFB5D9EB}|SequentialList-AddressBook.vcxproj|Z:\\DataStructure\\SequentialList-AddressBook\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{459F9554-5921-4C3D-9BC3-8A5BDFB5D9EB}|SequentialList-AddressBook.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -30,68 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SeqList.c",
-              "DocumentMoniker": "Z:\\DataStructure\\SequentialList-AddressBook\\SeqList.c",
-              "RelativeDocumentMoniker": "SeqList.c",
-              "ToolTip": "Z:\\DataStructure\\SequentialList-AddressBook\\SeqList.c",
-              "RelativeToolTip": "SeqList.c",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAN4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-02-17T14:23:07.601Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SeqList.h",
-              "DocumentMoniker": "Z:\\DataStructure\\SequentialList-AddressBook\\SeqList.h",
-              "RelativeDocumentMoniker": "SeqList.h",
-              "ToolTip": "Z:\\DataStructure\\SequentialList-AddressBook\\SeqList.h",
-              "RelativeToolTip": "SeqList.h",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAtwBYAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-02-17T14:15:10.057Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "main.c",
               "DocumentMoniker": "Z:\\DataStructure\\SequentialList-AddressBook\\main.c",
               "RelativeDocumentMoniker": "main.c",
               "ToolTip": "Z:\\DataStructure\\SequentialList-AddressBook\\main.c",
               "RelativeToolTip": "main.c",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-02-17T13:19:17.224Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddressBook.c",
-              "DocumentMoniker": "Z:\\DataStructure\\SequentialList-AddressBook\\AddressBook.c",
-              "RelativeDocumentMoniker": "AddressBook.c",
-              "ToolTip": "Z:\\DataStructure\\SequentialList-AddressBook\\AddressBook.c",
-              "RelativeToolTip": "AddressBook.c",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-02-17T13:18:57.377Z",
+              "WhenOpened": "2024-02-17T13:19:17.224Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddressBook.h",
-              "DocumentMoniker": "Z:\\DataStructure\\SequentialList-AddressBook\\AddressBook.h",
-              "RelativeDocumentMoniker": "AddressBook.h",
-              "ToolTip": "Z:\\DataStructure\\SequentialList-AddressBook\\AddressBook.h",
-              "RelativeToolTip": "AddressBook.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-02-17T13:18:04.452Z"
             }
           ]
         }

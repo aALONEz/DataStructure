@@ -1,6 +1,4 @@
 #include "SeqList.h"
-#include <stdio.h>
-#include <assert.h>
 
 /*
 * º¯ÊıÃû£ºDSL_Init
