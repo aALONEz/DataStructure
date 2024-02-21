@@ -12,6 +12,13 @@ int main()
 
 	SingleList_PopBack(&SL_Node);
 	SingleList_PopFront(&SL_Node);
-	SingleList_Print(SL_Node, SLPrintInt);//注意这里节点名已经是指针了不需要再次取地址了。
+	SingleList_Print(&SL_Node, SLPrintInt);//注意这里节点名已经是指针了不需要再次取地址了。
+	SingleList_Insert(&SL_Node, SingleList_Find(&SL_Node, 25), 24);
+	SingleList_InsertAfter(SL_Node, 23);
+	SingleList_InsertAfter(SingleList_Find(&SL_Node, 27), 28);
+	SingleList_Erase(&SL_Node, SingleList_Find(&SL_Node, 28));
+	SingleList_EraseAfter(SingleList_Find(&SL_Node, 26));
+	SingleList_Print(&SL_Node, SLPrintInt);//注意这里节点名已经是指针了不需要再次取地址了。
+	SingleList_DesTroy(&SL_Node);
 	return 0;
 }
