@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "Z:\\DataStructure\\BidirectionalLinkedList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0B943BE-649C-457C-A194-4DF28399F55A}|BidirectionalLinkedList.vcxproj|Z:\\DataStructure\\BidirectionalLinkedList\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E0B943BE-649C-457C-A194-4DF28399F55A}|BidirectionalLinkedList.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E0B943BE-649C-457C-A194-4DF28399F55A}|BidirectionalLinkedList.vcxproj|Z:\\DataStructure\\BidirectionalLinkedList\\BidirectionalLinkedList.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E0B943BE-649C-457C-A194-4DF28399F55A}|BidirectionalLinkedList.vcxproj|solutionrelative:BidirectionalLinkedList.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0B943BE-649C-457C-A194-4DF28399F55A}|BidirectionalLinkedList.vcxproj|Z:\\DataStructure\\BidirectionalLinkedList\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E0B943BE-649C-457C-A194-4DF28399F55A}|BidirectionalLinkedList.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0B943BE-649C-457C-A194-4DF28399F55A}|BidirectionalLinkedList.vcxproj|Z:\\DataStructure\\BidirectionalLinkedList\\BidirectionalLinkedList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +30,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.c",
               "DocumentMoniker": "Z:\\DataStructure\\BidirectionalLinkedList\\main.c",
               "RelativeDocumentMoniker": "main.c",
               "ToolTip": "Z:\\DataStructure\\BidirectionalLinkedList\\main.c",
               "RelativeToolTip": "main.c",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAUwC8AAAAAAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAUwC8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-02-20T14:06:25.842Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BidirectionalLinkedList.c",
               "DocumentMoniker": "Z:\\DataStructure\\BidirectionalLinkedList\\BidirectionalLinkedList.c",
               "RelativeDocumentMoniker": "BidirectionalLinkedList.c",
               "ToolTip": "Z:\\DataStructure\\BidirectionalLinkedList\\BidirectionalLinkedList.c",
               "RelativeToolTip": "BidirectionalLinkedList.c",
-              "ViewState": "AQIAAOkAAAAAAAAAAAAUwAMBAAAAAAAA",
+              "ViewState": "AQIAAOkAAAAAAAAAAAAUwO8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-02-20T14:06:13.563Z"
+              "WhenOpened": "2024-02-20T14:06:13.563Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
