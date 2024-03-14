@@ -178,3 +178,42 @@ int HP_Size(HP* php)
 
 	return php->size;
 }
+
+void HP_InitArray(HP* php, HPDataType* arr, int size)
+{
+	php->val = (HPDataType*)malloc(sizeof(HPDataType) * size);
+	if (php->val == NULL)
+	{
+		perror("HP_InitArray:malloc");
+		exit(1);
+	}
+	memcpy(php->val, arr, sizeof(HPDataType) * size);
+	php->capacity = php->size = size;
+
+	////向上建堆
+	//for (int i = 1; i < php->size; i++)
+	//{
+	//	AdjustUp(php->val, i);
+	//}
+
+	//向下建堆
+	//向下调整的算法有一个要求，要求当前节点的左右子树都要满足堆的性质，只有当前节点不满足堆的性质
+	for (int i = (size - 1 - 1) / 2; i >= 0; i--)
+	{
+		AdjustDown(php->val, php->size, i);
+	}
+}
+
+void HeapSort(int* a, int n)
+{
+	HP hp;
+	HP_InitArray(&hp, a, n);
+	//将堆顶数据依次弹出到数组中，此时如果是大堆就是降序，小堆就是升序
+	int i = 0;
+	while (!HP_Empty(&hp))
+	{
+		a[i++] = HP_Top(&hp);
+		HP_Pop(&hp);
+	}
+	HP_Destroy(&hp);
+}
