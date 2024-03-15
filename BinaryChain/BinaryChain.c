@@ -33,7 +33,7 @@ BTN* CreateBT(void)
 	BTN* nd4 = CreateBTNode(4);
 	BTN* nd5 = CreateBTNode(5);
 	BTN* nd6 = CreateBTNode(6);
-	BTN* nd7 = CreateBTNode(6);
+	BTN* nd7 = CreateBTNode(7);
 
 	nd1->left = nd2;
 	nd1->right = nd4;
@@ -149,6 +149,28 @@ int BT_KLevel(BTN* root, int k)
 	return BT_KLevel(root->left, k - 1) + BT_KLevel(root->right, k - 1);
 }
 
+BTN* BT_Find(BTN* root, BTDataType val)
+{
+	//assert(root);//这里不可以加断言，因为这里需要指针为NULL的时候要返回NULL，如果你在这里断言了就会一直报错
+	if (root == NULL)
+	{
+		return NULL;
+	}
+	if (root->val == val)//判断当前节点是不是要查找的值
+	{
+		return root;
+	}
+
+	BTN* tmpBTN = NULL;
+	tmpBTN = BT_Find(root->left, val);//先查找左子树
+	if (tmpBTN == NULL)//左子树找完了，如果有指针就不会为NULL，没有找到就去右子树找
+	{
+		tmpBTN = BT_Find(root->right, val);
+	}
+
+	return tmpBTN;
+}
+
 int main()
 {
 	BTN* root = CreateBT();
@@ -162,6 +184,15 @@ int main()
 	printf("%d\n", BT_Height(root));
 
 	printf("%d\n", BT_KLevel(root, 4));
+
+	if (BT_Find(root, 4))
+	{
+		printf("找到了！！\n");
+	}
+	else
+	{
+		printf("没有找到！！\n");
+	}
 
 	return 0;
 }
