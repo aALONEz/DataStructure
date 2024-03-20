@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <assert.h>
 
 typedef int BTDataType;
@@ -10,6 +11,8 @@ typedef struct BTNode
 	struct BTNode* right;//右子节点
 	BTDataType val;
 }BTN;
+
+#include "Queue.h"
 
 BTN* CreateBTNode(BTDataType val)
 {
@@ -43,7 +46,7 @@ BTN* CreateBT(void)
 	nd4->left = nd5;
 	nd4->right = nd6;
 
-	nd6->left = nd7;
+	nd2->right = nd7;
 
 	return nd1;
 }
@@ -171,6 +174,123 @@ BTN* BT_Find(BTN* root, BTDataType val)
 	return tmpBTN;
 }
 
+BTN* CreatTree(char* buff, int n, int* pi)
+{
+	if (buff[*pi] == '#' || (*pi) == (n - 1))
+	{
+		(*pi)++;
+		return NULL;
+	}
+
+	BTN* newroot = (BTN*)malloc(sizeof(BTN));
+	if (newroot == NULL)
+	{
+		perror("CreatTree:malloc\n");
+		exit(1);
+	}
+	//前序构建
+	newroot->val = buff[(*pi)++];
+	newroot->left = CreatTree(buff, n, pi);
+	newroot->right = CreatTree(buff, n, pi);
+	return newroot;
+}
+
+void BT_PreOrder_C(BTN* root)
+{
+	//首先判断当前节点是否为NULL
+	if (root == NULL)
+	{
+		printf("# ");
+		return;//为NULL直接返回
+	}
+
+	//不为空,就先访问根节点
+	printf("%c ", root->val);
+	//在访问左子树根节点
+	BT_PreOrder_C(root->left);
+	//再访问右子树根节点
+	BT_PreOrder_C(root->right);
+}
+
+void BT_Destroy(BTN* root)
+{
+	if (root == NULL)
+	{
+		return;
+	}
+	BT_Destroy(root->left);
+	BT_Destroy(root->right);
+	free(root);
+}
+
+void BT_LevelOrder(BTN* root)
+{
+	Queue q;
+	QueueInit(&q);//初始化队列
+	if (root != NULL)
+	{
+		QueuePush(&q, root);
+	}
+
+	while (!QueueEmpty(&q))
+	{
+		BTN* front = QueueFront(&q);//取队头的数据
+		QueuePop(&q);//弹出队头的数据
+		printf("%d ", front->val);
+
+		if (front->left)//如果左子节点不为NULL就插入队列
+		{
+			QueuePush(&q, front->left);
+		}
+		if (front->right)//如果右子节点不为NULL就插入队列
+		{
+			QueuePush(&q, front->right);
+		}
+	}
+	printf("\n");
+
+	QueueDestroy(&q);//销毁队列
+}
+
+bool BT_IsComplete(BTN* root)
+{
+	Queue q;
+	QueueInit(&q);//初始化队列
+	if (root != NULL)
+	{
+		QueuePush(&q, root);
+	}
+
+	while (!QueueEmpty(&q))
+	{
+		BTN* front = QueueFront(&q);
+		QueuePop(&q);
+		if (front == NULL)//遇到第一个NULL就跳出
+		{
+			break;
+		}
+
+		QueuePush(&q, front->left);
+		QueuePush(&q, front->right);
+	}
+
+	while (!QueueEmpty(&q))//判断后序队列是否有非空，因为完全二叉树是连续的不会出现交叉，所以如果出现非空就不是完全二叉树
+	{
+		BTN* front = QueueFront(&q);
+		QueuePop(&q);
+		if (front != NULL)//非NULL就说明不是完全二叉树
+		{
+			printf("Incomplete Binary Tree\n");
+			QueueDestroy(&q);
+			return false;
+		}
+	}
+	printf("Complete Binary Tree\n");//代码执行到这里说明第一个NULL之后后面都是NULL
+
+	QueueDestroy(&q);//销毁队列
+	return true;
+}
+
 int main()
 {
 	BTN* root = CreateBT();
@@ -194,5 +314,23 @@ int main()
 		printf("没有找到！！\n");
 	}
 
+	BT_LevelOrder(root);
+	BT_IsComplete(root);
+
+
+	char buff[] = { 'A','B','D','#','#','E','#','H','#','#','C','F','#','#','G','#','#' };
+	int i = 0;
+	int length = strlen(buff);
+	BTN* root_C = CreatTree(buff, length, &i);
+	BT_PreOrder_C(root_C);
+
+	BT_Destroy(root_C);
+	root_C = NULL;
+	BT_Destroy(root);
+	root = NULL;
+
 	return 0;
 }
+
+
+

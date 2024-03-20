@@ -1,2 +1,3 @@
 ﻿  BinaryChain.c
+Z:\DataStructure\BinaryChain\BinaryChain.c(323,15): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   BinaryChain.vcxproj -> Z:\DataStructure\BinaryChain\x64\Debug\BinaryChain.exe
