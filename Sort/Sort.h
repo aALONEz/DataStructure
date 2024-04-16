@@ -3,6 +3,7 @@
 
 typedef int SortType;
 
+void MergeSort(SortType* arr, int n);
 void QuickSort(SortType* arr, int left, int right);
 void SelectSort(SortType* arr, int size);
 void HeapSort(SortType* arr, int size);

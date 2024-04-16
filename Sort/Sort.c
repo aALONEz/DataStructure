@@ -1,4 +1,6 @@
 #include "Sort.h"
+#include <stdlib.h>
+#include <string.h>
 
 static void Swap(int* val1, int* val2)
 {
@@ -233,6 +235,12 @@ void SelectSort(SortType* arr, int size)
 	}
 }
 
+/// <summary>
+/// 快速排序
+/// </summary>
+/// <param name="arr">待排序的数组</param>
+/// <param name="left">待排序的数组左下标</param>
+/// <param name="right">待排序的数组右下标</param>
 void QuickSort(SortType* arr, int left, int right)
 {
 	if (left >= right)//区间内只有一个值或者区间内没有值，就返回。一个值是等于，没有值是大于
@@ -266,5 +274,57 @@ void QuickSort(SortType* arr, int left, int right)
 	// 【start ~ pivot - 1】pivot【pivot + 1 ~ end】
 	QuickSort(arr, start, pivot - 1);//左区间递归
 	QuickSort(arr, pivot + 1, end);//右区间递归
+}
+
+static void _MergeSort(SortType* arr, int begin , int end, SortType* tmparr)
+{
+	if (begin == end)//begin等于end的时候说明此时就只有一个数据了，那么这一个数据肯定是有序的不需要再分解了
+	{
+		return;
+	}
+	//分解
+	int mid = (end + begin) / 2;
+	_MergeSort(arr, begin, mid, tmparr);
+	_MergeSort(arr, mid + 1, end, tmparr);
+
+	//归并
+	int i = begin;
+	int begin1 = begin, end1 = mid;//左区间
+	int begin2 = mid + 1, end2 = end;//右区间
+	while (begin1 <= end1 && begin2 <= end2)
+	{
+		//谁小谁尾插到tmp数组
+		if (arr[begin1] < arr[begin2])
+		{
+			tmparr[i++] = arr[begin1++];
+		}
+		else if (arr[begin2] < arr[begin1])
+		{
+			tmparr[i++] = arr[begin2++];
+		}
+	}
+	while (begin1 <= end1)
+	{
+		tmparr[i++] = arr[begin1++];
+	}
+	while (begin2 <= end2)
+	{
+		tmparr[i++] = arr[begin2++];
+	}
+	memcpy((arr + begin), (tmparr + begin), (sizeof(SortType) * (size_t)((end - begin) + 1)));//将tmp数组归并好的数据复制回原数组对应位置
+}
+
+void MergeSort(SortType* arr, int n)
+{
+	//malloc申请数组，用于合并
+	SortType* tmparr = (SortType*)malloc(sizeof(SortType) * n);
+	if (tmparr == NULL)
+	{
+		perror("MergeSort:malloc\n");
+		exit(1);
+	}
+	_MergeSort(arr, 0, n - 1, tmparr);
+	free(tmparr);
+	tmparr = NULL;
 }
 

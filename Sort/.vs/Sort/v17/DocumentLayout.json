@@ -22,12 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -36,10 +32,9 @@
               "RelativeDocumentMoniker": "SortTest.c",
               "ToolTip": "Z:\\DataStructure\\Sort\\SortTest.c",
               "RelativeToolTip": "SortTest.c",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAEMAAAAMAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-03-20T07:33:36.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T07:33:36.428Z"
             },
             {
               "$type": "Document",
@@ -49,7 +44,7 @@
               "RelativeDocumentMoniker": "Sort.c",
               "ToolTip": "Z:\\DataStructure\\Sort\\Sort.c",
               "RelativeToolTip": "Sort.c",
-              "ViewState": "AQIAAO4AAAAAAAAAAAAAAPsAAAAvAAAA",
+              "ViewState": "AQIAAEEBAAAAAAAAAAAswBYBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-03-20T07:32:43.568Z",
               "EditorCaption": ""
@@ -64,8 +59,7 @@
               "RelativeToolTip": "Sort.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-20T07:32:30.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-20T07:32:30.471Z"
             }
           ]
         }
